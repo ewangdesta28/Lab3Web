@@ -1,0 +1,167 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #03080a;
+}
+section {
+	width: 100%;
+	height: 100vh;
+}
+form {
+	position: absolute;
+}
+.menu {
+	position: relative;
+	width: 50%;
+	background: rgba(255,255,255,.5);
+	padding:0 100px;
+	box-sizing: border-box;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+}
+nav {
+	position: relative;
+	float: left;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+nav ul li {
+	list-style: none;
+}
+nav ul li a {
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 33px 20px;
+	text-decoration: none;
+}
+nav ul li ul {
+	display: block;
+	background: rgba(255,255,255,.5);
+	min-width: 250px;
+	position: absolute;
+	margin-top: 1px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.5); 
+	opacity: 0;
+	visibility: hidden;
+	transition:  .5s;
+	transform: translateY(40px);
+}
+nav ul li:hover ul {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0px);
+}
+nav ul li ul li a {
+	padding: 10px;
+}
+.scontainer {
+	width: 80%;
+	padding: 20px;
+}
+.container h2 {
+	width: 100%;
+	color: #45f3ff;
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.container .row100 {
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(autofit,minmax(300px,1fr));
+}
+.container .row100 .col {
+	position: relative;
+	width: 100%;
+	padding: 0 10px;
+	margin: 30px 0 10px;
+	transition: 0.5s;
+}
+.container .row100 .inputbox {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	color: #45f3ff;
+}
+.container .row100 .inputbox input, .container .row100 .inputbox.textarea textarea {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	padding: 0 10px;
+	z-index: 1;
+	color: #000;
+}
+.container .row100 .inputbox .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 40px;
+	font-size: 18px;
+	padding: 0 10px;
+	display: block;
+	transition: 0.5s;
+	pointer-events: none;
+}
+.container .row100 .inputbox input:focus + .text,.container .row100 .inputbox input:valid + .text {
+	top: -35px;
+	left: -10px;
+}
+.container .row100 .inputbox .line {
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #45f3ff;
+	transition: 0.5s;
+	border-radius: 2px;
+	pointer-events: none;
+}
+.container .row100 .inputbox input:focus ~ .line,.container .row100 .inputbox input:valid ~ .line {
+	height: 100%;
+}
+.container .row100 .inputbox.textarea {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	padding: 10px 0;
+}
+.container .row100 .inputbox.textarea textarea {
+	height: 100%;
+	resize: none;
+}
+.container .row100 .inputbox textarea:focus + .text,.container .row100 .inputbox textarea:valid + .text {
+	top: -35px;
+	left: -10px;
+}
+.container .row100 .inputbox textarea:focus ~ .line,.container .row100 .inputbox textarea:valid ~ .line {
+	height: 100%;
+}
+input [type="submit"]
+{
+	border: none;
+	padding: 7px 35px;
+	cursor: pointer;
+	outline: none;
+	background: #45f3ff;
+	color: #000;
+	font-size: 18px;
+	border-radius: 2px;
+}
